@@ -1,20 +1,23 @@
 public class Book {
-    String bookName;
-    int yearRelize;
+    private String bookName;
+    private int yearRelize;
     private Author author;
-    private void setYearRelize (int yearRelize) {
+    public void setYearRelize (int yearRelize) {
+
         this.yearRelize = yearRelize;
     }
-    private String getBookName() {
+    public String getBookName() {
+
         return this.bookName;
     }
-    private int getYearRelize(){
+    public int getYearRelize(){
+
         return this.yearRelize;
     }
     public Book (String bookName, int yearRelize, Author author) {
         this.bookName = bookName;
         this.yearRelize = yearRelize;
-
+        //Author author = new Author(String nameFirst(), String nameLast);? Это так надо сделать?
     }
 
 }
