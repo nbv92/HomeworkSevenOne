@@ -1,23 +1,27 @@
 public class Book {
     private String bookName;
-    private int yearRelize;
+    private String yearRelize;
     private Author author;
-    public void setYearRelize (int yearRelize) {
-
+    public void setYearRelize (String yearRelize) {
         this.yearRelize = yearRelize;
     }
-    public String getBookName() {
-
-        return this.bookName;
-    }
-    public int getYearRelize(){
+    public String getYearRelize(){
 
         return this.yearRelize;
     }
-    public Book (String bookName, int yearRelize, Author author) {
+    public Book (String bookName, String yearRelize, Author author) {
         this.bookName = bookName;
         this.yearRelize = yearRelize;
-        //Author author = new Author(String nameFirst(), String nameLast);? Это так надо сделать?
     }
-
+    public String getToStringBook(){
+        //return toStringAuthor;
+        return "Книга " + this.bookName + " Издание " + this.yearRelize;
+    }
+    public boolean getEqualsBook() {
+        return getToStringBook().equals(getToStringBook());
+    }
+    public int hashCodeBook() {
+        String hashCodeBookString = "Книга " + this.bookName + " Издание " + this.yearRelize;
+        return hashCodeBookString.hashCode();
+    }
 }
