@@ -17,7 +17,7 @@ public class Book {
     public Book (String bookName, int yearRelize, Author author) {
         this.bookName = bookName;
         this.yearRelize = yearRelize;
-        //Author author = new Author(String nameFirst(), String nameLast);? Это так надо сделать?
+        this.author = author;
     }
 
 }
