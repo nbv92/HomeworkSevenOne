@@ -1,17 +1,18 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        //two author and two book,merge yearRelize book with setter
+        Author robMartin = new Author("Robert ","Martin");
+        Book oneBook = new Book("Perfuct Code",2008,robMartin);
+        System.out.println(robMartin.getNameFirst() + " " + robMartin.getNameLast());
+        System.out.println(oneBook.getBookName());
+        System.out.println(oneBook.getYearRelize());
+        oneBook.setYearRelize(1998);
+        System.out.println("setYearRelize = " + oneBook.getYearRelize());
+        Author bobbyJo = new Author("Bobby", "Jo");
+        Book twoBook = new Book("History JoJ0", 9999,bobbyJo);
+        System.out.println(bobbyJo.getNameFirst() + " " + bobbyJo.getNameLast());
+        System.out.println(twoBook.getBookName());
+        System.out.println(twoBook.getYearRelize());
     }
 }
