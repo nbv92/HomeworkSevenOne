@@ -13,15 +13,19 @@ public class Book {
         this.bookName = bookName;
         this.yearRelize = yearRelize;
     }
-    public String getToStringBook(){
+    public String ToString(){
         //return toStringAuthor;
         return "Книга " + this.bookName + " Издание " + this.yearRelize;
     }
-    public boolean getEqualsBook() {
-        return getToStringBook().equals(getToStringBook());
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
+        Book Book = (Book) other;
+        return Book.bookName == Book.bookName && Objects.equals(bookName, Book.bookName);
     }
-    public int hashCodeBook() {
-        String hashCodeBookString = "Книга " + this.bookName + " Издание " + this.yearRelize;
-        return hashCodeBookString.hashCode();
+    @Override
+    public int hashCode() {
+        return Object.hash(bookName,yearRelize);
     }
 }

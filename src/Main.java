@@ -13,6 +13,6 @@ public class Main {
         Book twoBook = new Book("History JoJ0", "9999",bobbyJo);
         System.out.println(bobbyJo.getToStringAuthor());
         System.out.println(twoBook.getToStringBook());
-
+        System.out.println(hashCodeBook);
     }
 }
